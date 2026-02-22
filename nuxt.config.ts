@@ -1,14 +1,21 @@
 // File: nuxt.config.ts
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
-  modules: [
-    '@nuxtjs/tailwindcss'
-  ],
-  css: ['~/assets/css/main.css'],
+  vite: {
+    plugins: [
+      tailwindcss() as any
+    ]
+  },
+
+  css: ['~/assets/main.css'],
+
   runtimeConfig: {
     public: {
       apiBase: 'http://43.157.248.166:8080'
     }
   },
+
   app: {
     head: {
       title: 'Express Laundry Homepage',
@@ -21,5 +28,11 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap' }
       ]
     }
+  },
+
+  modules: ['nuxt-lucide-icons'],
+
+  lucide: {
+    namePrefix: 'Lucide',
   }
 })

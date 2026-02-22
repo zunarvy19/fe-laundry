@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/container-queries";
+
+@theme {
+  --color-primary: #4848e5;
+  --color-secondary: #06B6D4;
+  --color-soft-violet: #EDE9FE;
+  --color-background-light: #f6f6f8;
+  --color-background-dark: #111121;
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #1a1a2e;
+
+  --font-display: "Plus Jakarta Sans", "sans-serif";
+  --font-sans: "Plus Jakarta Sans", "sans-serif";
+
+  --radius-default: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
+
+  --shadow-soft: 0 10px 40px -10px rgba(72, 72, 229, 0.1);
+  --shadow-glow: 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass-nav {
+    background: rgba(17, 17, 33, 0.8);
+} 

@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-white  border-t border-slate-200 pt-16 pb-8">
+  <footer class="bg-white border-t border-slate-200 pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
         <div class="col-span-2 md:col-span-1">
@@ -9,11 +9,11 @@
             </div>
             <span class="text-lg font-bold text-slate-900">Express Laundry</span>
           </div>
-          <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Solusi laundry modern untuk kamu yang sibuk. Cepat, bersih, dan terpercaya.</p>
+          <p class="text-sm text-slate-500 mb-4">Solusi laundry modern untuk kamu yang sibuk. Cepat, bersih, dan terpercaya.</p>
         </div>
         <div>
           <h4 class="font-bold text-slate-900 mb-4">Layanan</h4>
-          <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+          <ul class="space-y-2 text-sm text-slate-500">
             <li><a class="hover:text-primary" href="#">Kiloan Regular</a></li>
             <li><a class="hover:text-primary" href="#">Express 24h</a></li>
             <li><a class="hover:text-primary" href="#">Dry Cleaning</a></li>
@@ -22,7 +22,7 @@
         </div>
         <div>
           <h4 class="font-bold text-slate-900 mb-4">Perusahaan</h4>
-          <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+          <ul class="space-y-2 text-sm text-slate-500">
             <li><a class="hover:text-primary" href="#">Tentang Kami</a></li>
             <li><a class="hover:text-primary" href="#">Karir</a></li>
             <li><a class="hover:text-primary" href="#">Blog</a></li>
@@ -31,7 +31,7 @@
         </div>
         <div>
           <h4 class="font-bold text-slate-900 mb-4">Support</h4>
-          <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+          <ul class="space-y-2 text-sm text-slate-500">
             <li><a class="hover:text-primary" href="#">Pusat Bantuan</a></li>
             <li><a class="hover:text-primary" href="#">Syarat & Ketentuan</a></li>
             <li><a class="hover:text-primary" href="#">Kebijakan Privasi</a></li>

@@ -19,7 +19,7 @@
           Booking via WhatsApp dalam detik. Jemput antar gratis untuk area perkotaan. Nikmati hidup bebas cucian menumpuk.
         </p>
         <div class="flex flex-wrap items-center gap-4 mt-2">
-          <button class="bg-primary hover:bg-primary/90 text-white h-14 px-8 rounded-xl text-base font-bold transition-all shadow-lg shadow-primary/30 flex items-center gap-3 group">
+          <button class="bg-primary hover:bg-primary/90 text-white h-14 px-8 rounded-xl text-base font-bold transition-all shadow-lg shadow-primary/30 flex items-center gap-3 group cursor-pointer">
             <span>Pesan Lewat WhatsApp</span>
             <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </button>

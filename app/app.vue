@@ -6,7 +6,6 @@
       <HomeFeatures/>
       <HomePricing/>
       <HomeCalculator/>
-      <AppFooter/>
     </NuxtLayout>
   </div>
 </template>

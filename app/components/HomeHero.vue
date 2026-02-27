@@ -1,3 +1,5 @@
+
+
 <template>
   <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 px-6 overflow-hidden">
     <div class="absolute top-0 right-0 -z-10 w-[800px] h-[800px] bg-soft-violet/50 rounded-full blur-3xl opacity-60 translate-x-1/3 -translate-y-1/4 "></div>
@@ -49,12 +51,16 @@
         <div class="absolute inset-0 bg-linear-to-tr from-primary/20 to-secondary/20 rounded-[2.5rem] transform rotate-3"></div>
         <div class="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-500">
           <img alt="Modern bright laundry room with folded clothes" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCC7dGXK8qoW_2BFPWKfiznlylkZ1oHx2I3t-oWwk1ZGRcN-Mm4cy35wUCIp5ATAW_cPo2Y3kf3seFpKh0kq1M0j8rtT_3OHIi2BUPZFVErjhcNQEgflsTOIloS5PszuQxJkW0Fge-Zab_OPe_ccXOBdf4NMHftM3Cx11Gp8dEtTUSAvw-nfRcr0a_RHp6RMUJ1c9Eh3TaPY6qRl8GKNO00Uga57J7QjD-aomUEdhsejaxMBzDHXKqkmFEkZw5uGCp80RuvPqD5LSP"/>
-          <div class="absolute bottom-8 left-8 bg-white/90  backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/20 max-w-[200px]">
-            <div class="flex items-center gap-3 mb-2">
-              <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-              <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Live Status</span>
+          <div class="absolute bottom-8 left-8 bg-white/90  backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/20 max-w-[220px]">
+            <div class="flex items-center flex-row gap-3 mb-2">
+              <span class="bg-green-100 p-3 rounded-full text-base text-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <div class="flex flex-col text-sm ">
+                <span class="text-neutral-500 font-semibold">Garansi</span>
+                <span class="font-semibold text-slate-900 ">Cuci Ulang Gratis</span>
+              </div>
             </div>
-            <div class="text-sm font-semibold text-slate-900 ">Cucian #ORD-2092 sedang diantar 🚚</div>
           </div>
         </div>
       </div>

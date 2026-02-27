@@ -25,15 +25,16 @@ const closeMenu = () => {
         <NuxtLink to="/" class="text-slate-600 hover:text-primary transition-colors duration-300 font-medium text-sm px-1 py-2">Home</NuxtLink>
         <NuxtLink to="/#features" class="text-slate-600 hover:text-primary transition-colors duration-300 font-medium text-sm px-1 py-2">Service</NuxtLink>
         <NuxtLink to="/#pricing" class="text-slate-600 hover:text-primary transition-colors duration-300 font-medium text-sm px-1 py-2">Pricing</NuxtLink>
-      </div>
 
       <!-- Desktop Button -->
-      <div class="hidden md:flex items-center gap-3">
+      <div class="hidden md:flex items-center">
         <span class="flex flex-row items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full hover:bg-primary/90 transition-all duration-300 font-bold text-sm shadow-md shadow-primary/20 cursor-pointer">
-          <LucideSendHorizontal :size="16" />
           <a href="#" class="no-underline">Pesan Sekarang</a>
         </span>
       </div>
+      </div>
+
+
 
       <!-- Mobile Menu Button -->
       <div class="md:hidden flex items-center">

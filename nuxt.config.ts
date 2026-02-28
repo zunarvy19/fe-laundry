@@ -12,8 +12,14 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBase: 'http://43.157.248.166:8080'
+      // Menggunakan /api saat mode development agar dilewatkan ke proxy bawaan Nuxt (Nitro)
+      apiBase: process.env.NODE_ENV === 'development' ? '/' : 'http://43.157.248.166:8080'
     }
+  },
+
+  routeRules: {
+    // Proxy request /api agar tidak terkena CORS block dari browser di mode dev
+    '/api/**': { proxy: 'http://43.157.248.166:8080/**' }
   },
 
   app: {
@@ -30,7 +36,7 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['nuxt-lucide-icons'],
+  modules: ['nuxt-lucide-icons', '@pinia/nuxt'],
 
   lucide: {
     namePrefix: 'Lucide',

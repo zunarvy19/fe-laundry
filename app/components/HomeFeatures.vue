@@ -1,9 +1,23 @@
+<script setup>
+import { computed } from 'vue'
+
+const { data: webContent } = useApi('/webcontent')
+
+const featureTitle = computed(() => {
+  return webContent.value?.find(c => c.title.toLowerCase().includes('feature'))?.title || 'Kenapa Pilih Kami?'
+})
+
+const featureSubtitle = computed(() => {
+  return webContent.value?.find(c => c.title.toLowerCase().includes('feature'))?.content || 'Layanan laundry modern yang didesain khusus untuk gaya hidup urban yang sibuk dan dinamis.'
+})
+</script>
+
 <template>
   <section class="py-24 px-6 relative" id="services">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Kenapa Pilih Kami?</h2>
-        <p class="text-slate-600 text-lg">Layanan laundry modern yang didesain khusus untuk gaya hidup urban yang sibuk dan dinamis.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{{ featureTitle }}</h2>
+        <p class="text-slate-600 text-lg">{{ featureSubtitle }}</p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-soft hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">

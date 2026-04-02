@@ -12,6 +12,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       apiBase: 'http://43.157.248.166:8080'
     }
@@ -29,6 +30,18 @@ export default defineNuxtConfig({
   },
 
 >>>>>>> Stashed changes
+=======
+      // Menggunakan /api saat mode development agar dilewatkan ke proxy bawaan Nuxt (Nitro)
+      apiBase: process.env.NODE_ENV === 'development' ? '/api' : 'http://43.157.248.166:8080/api'
+    }
+  },
+
+  routeRules: {
+    // Proxy request /api agar tidak terkena CORS block dari browser di mode dev
+    '/api/**': { proxy: 'http://43.157.248.166:8080/api/**' }
+  },
+
+>>>>>>> login
   app: {
     head: {
       title: 'Express Laundry Homepage',
@@ -43,7 +56,7 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['nuxt-lucide-icons'],
+  modules: ['nuxt-lucide-icons', '@pinia/nuxt'],
 
   lucide: {
     namePrefix: 'Lucide',

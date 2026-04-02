@@ -1,6 +1,9 @@
 <template>
   <div>
-    <HomeHero />
-    <HomePricing />
+    <HomeHero/>
+    <HomeStats/>
+    <HomeFeatures/>
+    <HomePricing/>
+    <HomeCalculator/>
   </div>
 </template>

@@ -1,4 +1,7 @@
 <script setup>
+import { useLandingData } from '~/composables/useLandingData'
+
+const { whatsappLink } = useLandingData()
 const isOpen = ref(false)
 
 // Function to toggle menu
@@ -29,7 +32,7 @@ const closeMenu = () => {
       <!-- Desktop Button -->
       <div class="hidden md:flex items-center">
         <span class="flex flex-row items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full hover:bg-primary/90 transition-all duration-300 font-bold text-sm shadow-md shadow-primary/20 cursor-pointer">
-          <a href="#" class="no-underline">Pesan Sekarang</a>
+          <a :href="whatsappLink" class="no-underline">Pesan Sekarang</a>
         </span>
       </div>
       </div>
@@ -64,7 +67,7 @@ const closeMenu = () => {
           <NuxtLink to="/#pricing" @click="closeMenu" class="text-lg font-semibold text-slate-900">Pricing</NuxtLink>
           
           <div class="pt-4 mt-2 border-t border-slate-100">
-            <a href="#" @click="closeMenu" class="flex items-center justify-center gap-3 bg-primary text-white py-4 rounded-2xl font-bold shadow-lg shadow-primary/20">
+            <a :href="whatsappLink" @click="closeMenu" class="flex items-center justify-center gap-3 bg-primary text-white py-4 rounded-2xl font-bold shadow-lg shadow-primary/20">
               <LucideSendHorizontal :size="20" />
               Pesan Sekarang
             </a>

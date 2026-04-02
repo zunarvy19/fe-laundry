@@ -152,9 +152,9 @@ const handleLogin = async () => {
       }
       
       // Redirect ke halaman utils home setelah login sukses
-      router.push('/admin/dashboard-admin')
+      router.push('/admin/')
     } else {
-      errorMessage.value = 'Login gagal, token tidak diterima dari server.'
+      errorMessage.value =  'Login gagal, token tidak diterima dari server.'
     }
   } catch (error) {
     // Menangkap error dari backend

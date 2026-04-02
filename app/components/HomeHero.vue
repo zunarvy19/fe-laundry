@@ -1,4 +1,14 @@
+<script setup>
+import { computed } from 'vue'
+import { useLandingData } from '~/composables/useLandingData'
 
+const { whatsappLink } = useLandingData()
+const { data: webContent } = useApi('/webcontent')
+
+const titleContent = computed(() => {
+  return webContent.value?.find(c => c.title.toLowerCase().includes('hero'))?.content || 'Booking via WhatsApp dalam detik. Jemput antar gratis untuk area perkotaan. Nikmati hidup bebas cucian menumpuk.'
+})
+</script>
 
 <template>
   <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 px-6 overflow-hidden">
@@ -18,13 +28,13 @@
           <span class="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">Tanpa Ribet</span>
         </h1>
         <p class="text-lg text-slate-600 leading-relaxed max-w-lg">
-          Booking via WhatsApp dalam detik. Jemput antar gratis untuk area perkotaan. Nikmati hidup bebas cucian menumpuk.
+          {{ titleContent }}
         </p>
         <div class="flex flex-wrap items-center gap-4 mt-2">
-          <button class="bg-primary hover:bg-primary/90 text-white h-14 px-8 rounded-xl text-base font-bold transition-all shadow-lg shadow-primary/30 flex items-center gap-3 group cursor-pointer">
+          <a :href="whatsappLink" class="bg-primary hover:bg-primary/90 text-white h-14 px-8 rounded-xl text-base font-bold transition-all shadow-lg shadow-primary/30 flex items-center gap-3 group cursor-pointer inline-flex">
             <span>Pesan Lewat WhatsApp</span>
             <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </button>
+          </a>
           <div class="flex items-center gap-3 px-4 py-2 bg-white  border border-slate-200  rounded-xl shadow-sm">
             <div class="flex -space-x-2">
               <img alt="User Avatar 1" class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA367m5yWLMtiW5XpS49KzYAjxqwrE3dcWv16EVM9yRQfwTu6E7WJ3wXmbeChuNshh05IK4TAcO4p5oDbf64g_iNoQbrAY3smX15V7-bWTEMhv57vcKbMFDC-hEp_FlCZA2dtdqqPi9blz_xCAUg-Hs9Xef8hXHUXJOs6Q9XlEKy8mAuN62N0fPohpwYun0LWmHHY3Cz_i1LImRO0yDjpZ5DVsEygvpQ4frznERJjSl0CnqGxqw_Q2fZkyRWDeVSh79TPBYnoTayZWn"/>

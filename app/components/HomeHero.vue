@@ -31,7 +31,7 @@ const titleContent = computed(() => {
           {{ titleContent }}
         </p>
         <div class="flex flex-wrap items-center gap-4 mt-2">
-          <a :href="whatsappLink" class="bg-primary hover:bg-primary/90 text-white h-14 px-8 rounded-xl text-base font-bold transition-all shadow-lg shadow-primary/30 flex items-center gap-3 group cursor-pointer inline-flex">
+          <a :href="whatsappLink" class="bg-primary hover:bg-primary/90 text-white h-14 px-8 rounded-xl text-base font-bold transition-all shadow-lg shadow-primary/30 items-center gap-3 group cursor-pointer inline-flex">
             <span>Pesan Lewat WhatsApp</span>
             <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </a>

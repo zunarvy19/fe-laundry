@@ -188,7 +188,7 @@ const deletePackage = async (id) => {
 
   <!-- MODAL FORM (Menggunakan Teleport agar tidak terpotong Parent) -->
   <Teleport to="body">
-    <div v-if="showModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+    <div v-if="showModal" class="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6">
       <!-- Backdrop -->
       <div 
         @click="showModal = false"
@@ -252,7 +252,7 @@ const deletePackage = async (id) => {
 
             <!-- Benefits -->
             <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200">
-              <label class="block text-sm font-semibold text-slate-900 mb-3 flex items-center gap-2">
+              <label class=" text-sm font-semibold text-slate-900 mb-3 flex items-center gap-2">
                 <LucideListChecks :size="18" class="text-primary" /> Daftar Manfaat (Benefits)
               </label>
               

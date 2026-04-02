@@ -12,25 +12,6 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-      apiBase: 'http://43.157.248.166:8080'
-    }
-  },
-
-=======
-      // Menggunakan /api saat mode development agar dilewatkan ke proxy bawaan Nuxt (Nitro)
-      apiBase: process.env.NODE_ENV === 'development' ? '/api' : 'http://43.157.248.166:8080/api'
-    }
-  },
-
-  routeRules: {
-    // Proxy request /api agar diteruskan ke backend beserta /api-nya
-    '/api/**': { proxy: 'http://43.157.248.166:8080/api/**' }
-  },
-
->>>>>>> Stashed changes
-=======
       // Menggunakan /api saat mode development agar dilewatkan ke proxy bawaan Nuxt (Nitro)
       apiBase: process.env.NODE_ENV === 'development' ? '/api' : 'http://43.157.248.166:8080/api'
     }
@@ -40,8 +21,6 @@ export default defineNuxtConfig({
     // Proxy request /api agar tidak terkena CORS block dari browser di mode dev
     '/api/**': { proxy: 'http://43.157.248.166:8080/api/**' }
   },
-
->>>>>>> login
   app: {
     head: {
       title: 'Express Laundry Homepage',

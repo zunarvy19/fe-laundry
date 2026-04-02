@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  fe:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: laundry-fe
+    restart: unless-stopped
+    ports:
+      - "2369:2369"
+    environment:
+      - PORT=2369
+      - HOST=0.0.0.0
+      - NODE_ENV=production

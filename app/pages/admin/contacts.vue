@@ -37,7 +37,7 @@
               </td>
             </tr>
             <tr v-else v-for="contact in contacts" :key="contact.id" class="hover:bg-slate-50/50 transition-colors">
-              <td class="px-6 py-4">#{{ contact.id }}</td>
+              <td class="px-6 py-4">#{{ number++ }}</td>
               <td class="px-6 py-4 font-medium text-slate-900">
                 +62{{ contact.phone_number }}
               </td>
@@ -121,6 +121,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import ConfirmDialog from '~/components/admin/ConfirmDialog.vue'
+
+const number = 1;
 
 definePageMeta({
   layout: 'admin',

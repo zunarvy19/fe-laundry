@@ -41,9 +41,9 @@
           </div>
         </div>
         <div class="text-sm text-slate-600 line-clamp-4 flex-1 whitespace-pre-wrap">{{ item.content }}</div>
-        <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
-          <span class="font-mono bg-slate-50 px-2 py-1 rounded">ID: {{ item.id }}</span>
-          <span>Last updated: {{ new Date(item.updated_at).toLocaleDateString() }}</span>
+        <div class="mt-4 pt-4 border-t border-slate-100 flex items-end justify-end text-xs text-slate-400">
+          <!-- <span class="font-mono bg-slate-50 px-2 py-1 rounded">ID: {{ item.id }}</span> -->
+          <span class="">Last updated: {{ new Date(item.updated_at).toLocaleDateString() }}</span>
         </div>
       </div>
     </div>

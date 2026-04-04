@@ -38,7 +38,7 @@
               </td>
             </tr>
             <tr v-else v-for="loc in locations" :key="loc.id" class="hover:bg-slate-50/50 transition-colors">
-              <td class="px-6 py-4">#{{ loc.id }}</td>
+              <td class="px-6 py-4">#{{ number++ }}</td>
               <td class="px-6 py-4">
                 <div class="font-bold text-slate-900">{{ loc.name }}</div>
                 <div class="text-xs text-slate-500 mt-1 max-w-xs truncate" :title="loc.address">{{ loc.address }}</div>
@@ -148,6 +148,7 @@ definePageMeta({
   middleware: ['admin']
 })
 
+const number = 1;
 const { data: locations, pending, refresh } = useApi('/locations')
 
 // Modal Form State

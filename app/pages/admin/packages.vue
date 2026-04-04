@@ -19,6 +19,7 @@ const form = ref({
   price_label: '',
   unit: '/kg',
   special_treatment: '',
+  is_most_chosen: false,
   benefits: [''] // array 1 elemen kosong agar ada 1 input default
 })
 
@@ -32,6 +33,7 @@ const openAddModal = () => {
     price_label: '',
     unit: '/kg',
     special_treatment: '',
+    is_most_chosen: false,
     benefits: ['']
   }
   showModal.value = true
@@ -47,6 +49,7 @@ const openEditModal = (pkg) => {
     price_label: pkg.price_label,
     unit: pkg.unit,
     special_treatment: pkg.special_treatment || '',
+    is_most_chosen: pkg.is_most_chosen || false,
     benefits: pkg.benefits && pkg.benefits.length > 0 ? [...pkg.benefits] : ['']
   }
   showModal.value = true
@@ -69,6 +72,7 @@ const submitForm = async () => {
     price_label: form.value.price_label,
     unit: form.value.unit,
     special_treatment: form.value.special_treatment,
+    is_most_chosen: form.value.is_most_chosen,
     benefits: cleanBenefits
   }
 
@@ -154,12 +158,17 @@ const deletePackage = async (id) => {
           </button>
         </div>
 
-        <!-- Special Treatment Tag -->
-        <div v-if="pkg.special_treatment" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-bold mb-6 self-start">
-          <LucideZap :size="14" class="fill-primary" />
-          {{ pkg.special_treatment }}
+        <!-- Header Badges -->
+        <div class="flex gap-2 flex-wrap mb-6 self-start">
+          <div v-if="pkg.is_most_chosen" class="inline-flex items-center px-3 py-1.5 bg-yellow-100 text-yellow-700 rounded-full text-xs font-bold border border-yellow-200">
+            Terlaris
+          </div>
+          <div v-if="pkg.special_treatment" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-bold">
+            <LucideZap :size="14" class="fill-primary" />
+            {{ pkg.special_treatment }}
+          </div>
         </div>
-        <div v-else class="h-9 mb-6"></div> <!-- Spacer jika tidak ada label -->
+        <div v-if="!pkg.special_treatment && !pkg.is_most_chosen" class="h-9 mb-6"></div> <!-- Spacer jika tidak ada label -->
 
         <!-- Title & Price -->
         <h3 class="text-xl font-bold text-slate-900 mb-2">{{ pkg.name }}</h3>
@@ -248,6 +257,17 @@ const deletePackage = async (id) => {
                 <input v-model="form.special_treatment" type="text" placeholder="Contoh: Selesai Besok (24 Jam)" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none" />
                 <p class="text-[11px] text-slate-500 mt-1">Kosongkan jika paket ini tidak mendapat highlight/label.</p>
               </div>
+            </div>
+
+            <!-- Is Most Chosen -->
+            <div class="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
+              <div class="mt-0.5">
+                <input v-model="form.is_most_chosen" type="checkbox" id="is_most_chosen" class="w-5 h-5 rounded text-primary border-slate-300 focus:ring-primary focus:ring-2 cursor-pointer" />
+              </div>
+              <label for="is_most_chosen" class="text-sm font-semibold text-slate-700 cursor-pointer select-none">
+                Tandai sebagai Paket Terlaris (Most Chosen)
+                <p class="text-[11px] text-slate-500 font-normal mt-0.5">Paket ini akan diberi highlight khusus dan ditarik sedikit ke atas agar lebih menonjol.</p>
+              </label>
             </div>
 
             <!-- Benefits -->

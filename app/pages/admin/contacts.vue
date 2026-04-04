@@ -90,7 +90,7 @@
               </div>
 
               <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100">
-                <input v-model="form.is_active" type="checkbox" id="isActive" class="w-4 h-4 text-primary bg-white border-slate-300 rounded focus:ring-primary focus:ring-2">
+                <input v-model="form.is_active" type="checkbox" id="isActive" class="w-4 h-4 text-primary bg-white border-slate-300 rounded focus:ring-primary focus:ring-2 checked:bg-primary">
                 <label for="isActive" class="text-sm font-medium text-slate-700 cursor-pointer select-none">Set as active contact number</label>
               </div>
             </form>

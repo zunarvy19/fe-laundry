@@ -5,5 +5,6 @@
     <HomeFeatures/>
     <HomePricing/>
     <HomeCalculator/>
+    <HomeLocation/>
   </div>
 </template>

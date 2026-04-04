@@ -51,6 +51,15 @@
         <LucideFileText class="w-5 h-5" :class="route.path === '/admin/content' ? 'text-primary' : 'text-slate-400'" />
         Web Content
       </NuxtLink>
+      
+      <NuxtLink 
+        to="/admin/locations"
+        class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors"
+        :class="[route.path === '/admin/locations' ? 'bg-soft-violet text-primary' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900']"
+      >
+        <LucideMapPin class="w-5 h-5" :class="route.path === '/admin/locations' ? 'text-primary' : 'text-slate-400'" />
+        Locations
+      </NuxtLink>
     </div>
   </aside>
 </template>

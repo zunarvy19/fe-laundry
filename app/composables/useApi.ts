@@ -37,7 +37,7 @@ export function useApi<T>(url: string | (() => string), options: UseFetchOptions
       // Handle Unauthorized error
       if (response.status === 401) {
         const auth = useAuthStore()
-        auth.logout() // akan mengosongkan state dan token, serta redirect ke /login
+        auth.logout() 
       }
     },
 

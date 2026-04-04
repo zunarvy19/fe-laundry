@@ -137,7 +137,7 @@ const handleLogin = async () => {
   errorMessage.value = ''
   
   try {
-    const response = await $api('/api/login', {
+    const response = await $api('/login', {
       method: 'POST',
       body: {
         username: form.username,
